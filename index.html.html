@@ -1,0 +1,27 @@
+
+a = float(input("Ingrese la primera longitud: "))
+b = float(input("Ingrese la segunda longitud: "))
+c = float(input("Ingrese la tercera longitud: "))
+
+
+if a >= b and a >= c:
+    mayor = a
+    suma_otros = b + c
+elif b >= a and b >= c:
+    mayor = b
+    suma_otros = a + c
+else:
+    mayor = c
+    suma_otros = a + b
+
+
+if mayor < suma_otros:
+    
+    if a == b and b == c:
+        print("Se forma un triángulo EQUILÁTERO.")
+    elif a == b or a == c or b == c:
+        print("Se forma un triángulo ISÓSCELES.")
+    else:
+        print("Se forma un triángulo ESCALENO.")
+else:
+    print("No se puede formar un triángulo con estas longitudes.")
